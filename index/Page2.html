@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин мебели</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/wood-pattern.png');
+            height: 100vh;
+            overflow-y: scroll;
+        }
+
+        h1 {
+            color: #3e2723;
+            font-size: 48px;
+            margin: 20px 0;
+            text-align: center;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .container-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .container {
+            border-radius: 10px;
+            width: 280px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff8e1;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
+            overflow: hidden;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background-color: #fbe9e7;
+        }
+
+        .image-preview {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+        }
+
+        .text-section {
+            padding: 10px;
+            flex: 0 0 60px; /* Уменьшена высота текстовой секции */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .short-label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4e342e;
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 12px;
+            color: #6d4c41;
+            text-align: center;
+            margin-top: 3px;
+        }
+		.long-container {
+		width: 80%;
+		padding:40px;
+		background-color: #fff8e1;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+		margin: 20px 0;
+			}
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #3e2723;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background-color: #5d4037;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInAnimation 1s forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="back-button" onclick="history.back()">Назад</button>
+
+    <h1>Мебельный Магазин</h1>
+    
+    <div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat1.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «Труба»</div>
+                <div class="description">Размер 180*200
+С подъемным механизмом</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat2.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Труба-4»</div>
+                <div class="description">Размер 180*200 
+С подъемным механизмом</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat3.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать -Диван «Труба»</div>
+                <div class="description">Размер 90*200
+С подъемным механизмом</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat4.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">3D Кровать </div>
+                <div class="description">Размер 120*200 
+С подъемным механизмом</div>
+            </div>
+        </div>
+    </div>
+	 <div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat5.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «Мирина»</div>
+                <div class="description">Размер 180*200 
+С подъемным механизмом</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat6.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Мирина»</div>
+                <div class="description">Размер 180*200 
+С подъемным механизмом 
+Ткань -рогожка</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat7.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Елка»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat8.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Мирина -2» </div>
+                <div class="description">Размер 180*200
+Банкетка 
+Размер :140*40</div>
+            </div>
+        </div>
+    </div> <div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat9.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «Елка-3»</div>
+                <div class="description">Размер 180*200 
+Прикроватные тумбы 
+Размер:45*45</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat10.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «3D»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat11.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Мирина»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat12.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Грэй»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+	
+        
+     <div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat13.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «Ромб»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat14.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Мирина»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+		
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat15.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Мирина»</div>
+                <div class="description">Размер 180*200</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat16.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Лайт»</div>
+                <div class="description">Размер 180*200</div>
+            </div>
+        </div>
+    </div> <div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat17.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «Ракета »</div>
+                <div class="description">Кровать 180*200</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat18.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Модерн»</div>
+                <div class="description">Кровать 180*200</div>
+            </div>
+        </div>
+		
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat19.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Труба»</div>
+                <div class="description">Размер 160*200</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat20.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Корона» с кантиком </div>
+                <div class="description">Размер 160*200</div>
+            </div>
+        </div>
+    </div> <div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat21.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «Труба»</div>
+                <div class="description">Размер 200*200</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat22.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Вега»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+		
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat23.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Модерн»</div>
+                <div class="description">Размер 160*200</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat24.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Модерн»</div>
+                <div class="description">Размер 200*200</div>
+            </div>
+        </div>
+    </div> 
+	<div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat25.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «Пуговица»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat26.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Труба»</div>
+                <div class="description">Размер :180*200</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat27.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Норва»</div>
+                <div class="description">Кровать 180*200</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat28.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Труба-4»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+	<div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat29.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Стеновая панель</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat30.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Мирина»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat31.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Багет»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat32.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Елка»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+	<div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat33.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «3D»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat34.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Елка-3»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat35.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Труба»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat36.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Елка-4»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+	<div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat37.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «Геометрия»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat38.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Елка-4»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat39.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Геометрия»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat40.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Труба-4»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+	<div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat41.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «Пуговица-2»</div>
+                <div class="description">Размер 140*200</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat42.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Геометрия»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat43.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Геометрия» в небесном голубом оттенке</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat44.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Елка-4»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+	<div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat45.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «Геометрия»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat46.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Диван-кровать «Труба»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat47.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Диван кровать «Мирина»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat48.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Труба»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+	<div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat49.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «Багет»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat50.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Найт»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat51.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Труба»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat52.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Севен»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+	<div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="k/Krovat53.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Кровать «Дот»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat54.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Труба -4»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat55.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Диван-Кровать «труба»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat56.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Норва»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+	<div class="container-wrapper">
+	<div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat57.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Диван -Кровать «Ромб»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat58.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Севен»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+	<div>
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat59.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Севен»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div><div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat60.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Детская кровать «Корона»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+	</div>
+	<div class="container-wrapper">
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat61.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Елка»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+	<div>
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat62.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Дейл»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+	<div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="k/Krovat63.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Кровать «Винт»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="k/Krovat64.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кровать «Фрэйм»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+	</div>
+	<div class="container-wrapper">
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat65.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Мирина» с кантиком</div>
+                <div class="description"></div>
+            </div>
+        </div>
+		<div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat66.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Риб»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+		<div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat67.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Мирина» с кантиком</div>
+                <div class="description"></div>
+            </div>
+        </div>
+		<div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat68.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Мирина» с кантиком </div>
+                <div class="description">Размер 140*200</div>
+            </div>
+        </div>
+    </div>
+	<div class="container-wrapper">
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat69.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Детская кровать «Мирина» с углом</div>
+                <div class="description"></div>
+            </div>
+        </div>
+		<div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat70.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Бабл»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+		<div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat71.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Мирина»</div>
+                <div class="description"></div>
+            </div>
+        </div>
+		<div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="k/Krovat72.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Кровать «Софа» </div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	
+	
+	<div class="container-wrapper">
+        
+	<div class="container-wrapper">
+    <div class="container fade-in long-container">
+        <img class="image-preview" src="k/R.jpeg" alt="Длинная секция">
+        <div class="text-section">
+            <div class="short-label">Наши Услуги</div>
+            <div class="description">
+                Мы предлагаем широкий ассортимент мебели, включая диваны, кресла, столы и шкафы. Наша продукция отличается высоким качеством и стильным дизайном. Свяжитесь с нами для получения дополнительной информации.
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
