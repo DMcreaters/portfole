@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин мебели</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/wood-pattern.png');
+            height: 100vh;
+            overflow-y: scroll;
+        }
+
+        h1 {
+            color: #3e2723;
+            font-size: 48px;
+            margin: 20px 0;
+            text-align: center;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .container-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .container {
+            border-radius: 10px;
+            width: 280px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff8e1;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
+            overflow: hidden;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background-color: #fbe9e7;
+        }
+
+        .image-preview {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+        }
+
+        .text-section {
+            padding: 10px;
+            flex: 0 0 60px; /* Уменьшена высота текстовой секции */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .short-label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4e342e;
+            margin: 5px 0;
+            text-align: center;
+        }
+		.long-container {
+		width: 80%;
+		padding:40px;
+		background-color: #fff8e1;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+		margin: 20px 0;
+			}
+
+
+        .description {
+            font-size: 12px;
+            color: #6d4c41;
+            text-align: center;
+            margin-top: 3px;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #3e2723;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background-color: #5d4037;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInAnimation 1s forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="back-button" onclick="history.back()">Назад</button>
+
+    <h1>Мебельный Магазин</h1>
+    
+    <div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="d/Divan1.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Диван “UR01” </div>
+                <div class="description">
+					• Размеры:2,35 *107
+					• Размеры спального места: 190*150
+                </div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="d/Divan2.jpg" alt="Прямой Диван «Модерн»">
+            <div class="text-section">
+                <div class="short-label">Прямой Диван «Модерн»</div>
+                <div class="description">
+Размер 2,5
+ Каркас: натуральное дерево сосны
+Брус 5×5 . 
+На болтовом крепеже .
+</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="d/Divan3.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Угловой диван «Равена»
+</div>
+                <div class="description">Размер 3,20*1,80</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="d/Error1.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Диван “Тифани “</div>
+                <div class="description">2,5*1,0
+ Каркас: натуральное дерево сосны
+Брус 5×5 . 
+На болтовом крепеже .
+</div>
+            </div>
+        </div>
+    </div>
+	 <div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="d/Divan5.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Диван Клоуд 
+</div>
+                <div class="description">Размер 2,6*1,1
+ Каркас: натуральное дерево сосны
+Брус 5×5 . 
+На болтовом крепеже .
+</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="d/Divan6.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Чикаго 
+</div>
+                <div class="description">Размер 2,5*1,1</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="d/Divan7.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Модульный диван «Boston”</div>
+                <div class="description">размер 3м</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="d/Divan13.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Диван «Пума»
+</div>
+                <div class="description">Размер 2,50*1,1
+Спальное место :2,00*1,50
+ Каркас: натуральное дерево сосны
+Брус 5×5 . 
+На болтовом крепеже .
+</div>
+            </div>
+        </div>
+    </div> <div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="d/Divan9.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Угловой диван Джерси</div>
+                <div class="description">2,8*1,80</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="d/Divan10.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Угловой диван «Модерн»
+</div>
+                <div class="description">Размер :2,80*1,80 
+Механизм раскладывания : дельфин</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="d/Divan11.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Угловой Диван «Брауни»
+</div>
+                <div class="description">Размер :2,80*1,70
+ Каркас: натуральное дерево сосны
+Брус 5×5 . 
+На болтовом крепеже .
+</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="d/Divan12.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Угловой модерн 
+</div>
+                <div class="description">* Размеры:2,75*1,80
+ Каркас: натуральное дерево сосны
+Брус 5×5 . 
+На болтовом крепеже .
+</div>
+            </div>
+        </div>
+    </div>
+	<div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="d/Divan13.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Диван «Пума»
+</div>
+                <div class="description">Размер 2,50*1,1
+Спальное место :2,00*1,50
+ Каркас: натуральное дерево сосны
+Брус 5×5 . 
+На болтовом крепеже .
+</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="d/Divan14.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Элегантное кресло</div>
+                <div class="description">Современное кресло для любого интерьера.</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="d/Divan15.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Диван «Лоди »</div>
+                <div class="description">Размер 2,5*90</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="d/Divan16.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Стильный шкаф</div>
+                <div class="description">Элегантный шкаф для хранения вещей.</div>
+            </div>
+        </div>
+    </div>
+	<div class="container-wrapper">
+        <div class="container fade-in">
+            <img class="image-preview" src="d/Divan17.jpg" alt="Софа 1">
+            <div class="text-section">
+                <div class="short-label">Роскошная софа</div>
+                <div class="description">Удобная и стильная софа для вашего дома.</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.2s;">
+            <img class="image-preview" src="d/Divan18.jpg" alt="Кресло 2">
+            <div class="text-section">
+                <div class="short-label">Диван «Belt»</div>
+                <div class="description">Современное кресло для любого интерьера.</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.4s;">
+            <img class="image-preview" src="d/Divan19.jpg" alt="Стол 3">
+            <div class="text-section">
+                <div class="short-label">Кресло «Классик»</div>
+                <div class="description">Идеальный стол для семейных ужинов.</div>
+            </div>
+        </div>
+
+        <div class="container fade-in" style="animation-delay: 0.6s;">
+            <img class="image-preview" src="d/Divan20.jpg" alt="Шкаф 4">
+            <div class="text-section">
+                <div class="short-label">Стильный шкаф</div>
+                <div class="description">Элегантный шкаф для хранения вещей.</div>
+            </div>
+        </div>
+    </div>
+	<div class="container-wrapper">
+    <div class="container fade-in long-container">
+        <img class="image-preview" src="d/Section.jpg" alt="Длинная секция">
+        <div class="text-section">
+            <div class="short-label">Наши товары сделаны</div>
+            <div class="description">
+                Мы предлагаем широкий ассортимент мебели, включая диваны, кресла, столы и шкафы. Наша продукция отличается высоким качеством и стильным дизайном. Свяжитесь с нами для получения дополнительной информации.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
